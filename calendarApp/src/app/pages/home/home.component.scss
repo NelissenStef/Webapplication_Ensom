@@ -1,0 +1,23 @@
+.person-card {
+    border-bottom: 2px solid #f6b024;
+    padding: 30px;
+     
+    mat-icon {
+         color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    margin: 10px;
+}
+
+h2 {
+    margin: 25px;
+    font-weight: 300;
+}
+
+h4 {
+    font-weight: 400;
+}

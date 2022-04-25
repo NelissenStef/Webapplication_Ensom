@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayoutAlign="center center">
+            <img src="../../../assets/logo.png" height="55"/>
+        </div>
+       <button mat-icon-button [matMenuTriggerFor]="accountMenu">
+            <mat-icon>account_circle</mat-icon>
+            <mat-menu #accountMenu="matMenu">
+             <!--    <button mat-menu-item (click)="navigateClick('/login')">
+                    <mat-icon>person_outline</mat-icon>
+                    Account</button> -->
+                <button (click)="logOut()" mat-menu-item>
+                    <mat-icon>power_settings_new</mat-icon>
+                    Uitloggen</button>
+            </mat-menu>
+        </button> 
+    </mat-toolbar-row>
+</mat-toolbar>

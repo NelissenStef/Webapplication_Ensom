@@ -1,0 +1,87 @@
+
+@use '@angular/material' as mat;
+
+/* $custom-typograpy: mat.define-typography-config(
+    $font-family: "Montserrat"
+); */
+
+@import "~@angular/material/theming";
+ 
+@include mat-core();
+
+// @include mat.core($custom-typograpy);
+
+$custom-primary: (
+    50 : #fef6e5,
+    100 : #fce7bd,
+    200 : #fbd892,
+    300 : #f9c866,
+    400 : #f7bc45,
+    500 : #f6b024,
+    600 : #f5a920,
+    700 : #f3a01b,
+    800 : #f29716,
+    900 : #ef870d,
+    A100 : #ffffff,
+    A200 : #fff3e7,
+    A400 : #ffdab4,
+    A700 : #ffcd9b,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-accent: (
+    50 : #e1e9f0,
+    100 : #b4c9da,
+    200 : #82a5c2,
+    300 : #5080aa,
+    400 : #2b6597,
+    500 : #054a85,
+    600 : #04437d,
+    700 : #043a72,
+    800 : #033268,
+    900 : #012255,
+    A100 : #87acff,
+    A200 : #5488ff,
+    A400 : #2165ff,
+    A700 : #0853ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+ 
+$custom-theme-primary: mat-palette($custom-primary);
+$custom-theme-accent:  mat-palette($custom-accent);
+ 
+$custom-theme-warn: mat-palette($mat-red);
+ 
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+ 
+@include angular-material-theme($custom-theme);

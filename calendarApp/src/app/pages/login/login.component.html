@@ -1,0 +1,57 @@
+<div id="login-container-full" fxLayout="row">
+    <div
+      id="background-container"
+      fxLayoutAlign="center center"
+      fxFlex="80"
+      fxHide.lt-sm
+      fxFlex.md="60"
+      fxFlex.sm="60"
+    >
+      <div
+        class="title-container"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+      >
+      
+      </div>
+    </div>
+    <div
+      fxLayoutAlign="space-around center"
+      fxFlex="20"
+      fxFlex.lt-sm="100"
+      fxFlex.md="40"
+      fxFlex.sm="40"
+      style="background-color: #f6b024;"
+    >
+      <div fxFlex="100" class="login-box">
+        <!-- <h1>Ensom</h1> -->
+        <div fxLayoutAlign="center center">
+          <img src="../../../assets/logo.png" style="max-width: 100%; height: 100px;"/>
+        </div>
+        <br/>
+        <form #loginForm="ngForm" id="loginform" fxLayout="column">
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput name="email" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Wachtwoord</mat-label>
+            <input
+              matInput
+              type="password"
+              name="password"
+            />
+          </mat-form-field>
+          <button
+          color="accent"
+            mat-raised-button
+            aria-label="login"
+            (click)="loginButtonClick()"
+          >
+            Inloggen
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
